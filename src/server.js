@@ -20,6 +20,9 @@ mongoose.connect(url)
 app.get("/",function(req,res){
     res.json({"success":false,"message":"hello"});
 });
+app.get("/hello",function(req,res){
+ res.json({"hello":"world"});
+});
 
 const UserRoute=require("./routes/user_route");
 app.use("/api/user",UserRoute);
